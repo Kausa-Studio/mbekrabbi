@@ -12,6 +12,12 @@
 </head>
 
 <body>
+  <audio id="maliq" loop>
+    <source src="src/dia-maliq.mp3" type="audio/ogg" />
+  </audio> 
+  <div id="mp3-mute">
+    a
+  </div>
   <!--Page 1-->
   <div class="container-100">
     <div class="row no-gutters">
@@ -28,6 +34,10 @@
           <div class="text-center">
             you're invited to the Wedding Ceremony of Zaim & Adha :)
            </div>
+           <a href="#page2"><div class="btn-buka-undangan-atas" onclick="triggerlagu()">
+            ✉ Buka Undangan
+           </div>
+           </a>
          
         </div>
       </div>
@@ -37,10 +47,20 @@
         </div>
       </div>
     </div>
+    <div class="btn-undangan-center-bawah">
+      <div class="text-center">
+        <a href="#page2">
+          <div class="btn-buka-undangan-bawah" onclick="triggerlagu()">
+          ✉ Buka Undangan
+         </div>
+         </a>
+      </div>
+    </div>
+    
   </div>
 
   <!--Page 2-->
-  <div class="container-100cr">
+  <div id="page2" class="container-100cr">
     <div class="row">
       <div class="col-md-6">
 
@@ -73,6 +93,12 @@
     </div>
   </div>
   <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+  <script>
+    function triggerlagu() {
+      var audio = document.getElementById("maliq");
+      audio.play();
+    }
+  </script>
 </body>
 
 </html>
