@@ -1,0 +1,2 @@
+Page 1:
+- Versi mobile belum bisa click buat display box - box2 dari none jadi block

@@ -8,13 +8,13 @@
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="bootstrap/css/custom.css">
   <link rel="icon" href="src/icon.png" type="image/gif" sizes="64x64">
-  
+
 </head>
 
 <body>
   <audio id="maliq" loop>
     <source src="src/dia-maliq.mp3" type="audio/ogg" />
-  </audio> 
+  </audio>
   <div id="mp3-mute">
     a
   </div>
@@ -26,19 +26,20 @@
           <div class="mb-4">
             <img class="img-fluid" src="src/page1-bijibungamatahari.png" title="This image needs to be centered">
           </div>
-          
+
           <div class="text-center">
-           Hello <span class="nama-terundang">Prs Denny</span> 
+            Hello <span class="nama-terundang">Prs Denny</span>
           </div>
-          
+
           <div class="text-center">
             you're invited to the Wedding Ceremony of Zaim & Adha :)
-           </div>
-           <a href="#page2"><div class="btn-buka-undangan-atas" onclick="triggerlagu()">
-            ✉ Buka Undangan
-           </div>
-           </a>
-         
+          </div>
+          
+            <div class="btn-buka-undangan-atas" id="btn-undangan" onclick="triggerlagu()">
+              ✉︎ Buka Undangan
+            </div>
+          
+
         </div>
       </div>
       <div class="col-md-5">
@@ -49,18 +50,16 @@
     </div>
     <div class="btn-undangan-center-bawah">
       <div class="text-center">
-        <a href="#page2">
-          <div class="btn-buka-undangan-bawah" onclick="triggerlagu()">
-          ✉ Buka Undangan
-         </div>
-         </a>
+          <div id="btn-undangan2" class="btn-buka-undangan-bawah" onclick="triggerlagu()">
+            ✉︎ Buka Undangan
+          </div>
       </div>
     </div>
-    
+
   </div>
 
   <!--Page 2-->
-  <div id="page2" class="container-100cr">
+  <div id="box" class="container-100cr" style="display: none;">
     <div class="row">
       <div class="col-md-6">
 
@@ -71,7 +70,7 @@
     </div>
   </div>
   <!--Page 3-->
-  <div class="container-100">
+  <div id="box1" class="container-100" style="display: none;">
     <div class="row">
       <div class="col-md-6">
 
@@ -82,7 +81,7 @@
     </div>
   </div>
   <!--Page 4-->
-  <div class="container-50">
+  <div id="box2" class="container-50" style="display:none;">
     <div class="row no-gutters">
       <div class="col-md-6 half-crn" style="border:2px solid saddlebrown">
 
@@ -92,12 +91,32 @@
       </div>
     </div>
   </div>
+
   <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
   <script>
     function triggerlagu() {
       var audio = document.getElementById("maliq");
       audio.play();
     }
+  </script>
+  <script>
+    const btn = document.getElementById('btn-undangan');
+
+    btn.addEventListener('click', () => {
+
+      const box = document.getElementById('box');
+      box.style.display = 'block';
+      const box1 = document.getElementById('box1');
+      box1.style.display = 'block';
+      const box2 = document.getElementById('box2');
+      box2.style.display = 'block';
+
+      var element = document.querySelector("#box");
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end'
+      });
+    });
   </script>
 </body>
 
