@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 html,
 body {
     scroll-behavior:smooth;
@@ -15,7 +16,10 @@ a{
 .container-50 {
     height: 50%;
 }
-
+.container-50cr {
+    height: 50%;
+    background-color: #500d0d;
+}
 .container-100cr {
     height: 100%;
     background-color: #500d0d;
@@ -33,6 +37,7 @@ a{
     height: 100vh;
     
 }
+
 .btn-buka-undangan-atas{
     display: flex;
     justify-content: center;
@@ -128,6 +133,45 @@ text-decoration: underline #500d0d;
     padding: 10px;
 }
 
+
+
+/*Page 2*/
+.page2t{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10vh;
+    padding-top:20px ;
+    font-family: 'Great Vibes', cursive;
+    font-size: 35px;
+    color: #fff;
+}
+.page2r{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+.page2l{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.img-gallery{
+    height: 90%;
+    max-width: 100%;
+    object-fit: scale-down;
+   
+}
+
+/*responsive*/
 @media only screen and (max-width: 768px) {
     .logo-page1r {
         height: 40vh;
@@ -141,6 +185,17 @@ text-decoration: underline #500d0d;
     .img-logo{
         height: 100%;
 
+    }
+    .page2t{
+        height: 10vh;
+    }
+    .page2r{
+        height: 10vh;
+
+    }
+    .page2l{
+
+        height:80vh;
     }
     .btn-buka-undangan-atas{
         display: none;
@@ -175,6 +230,7 @@ text-decoration: underline #500d0d;
     }
 }
 
+/*animation*/
 @keyframes glowingbtn
 {
   0% {
