@@ -282,18 +282,32 @@ text-decoration: underline #500d0d;
    
 }
 .title-undangan{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Great Vibes', cursive;
     font-weight: 400;
     font-size: 33px;
     align-items: center;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    color: #500d0d;
+    text-decoration: underline;
+    text-decoration-color: #500d0d;
     text-align: center;
 }
 .btn-send{
-    background-color: #FDD4B6;
     border: none;
+    background-color: #500d0d;
+    color: #fff;
+    height: 40px;
+    border-radius: 60px;
+    font-size: 16px;
+    cursor: pointer;
+    animation: glowingbtn 1s infinite;
+    transition: 0.6s;
     margin-bottom: 20px;
+}
+.btn-send:hover{
+    border: none;
+    background-color: #380909 !important;
 }
 
 /*Page 5*/
@@ -301,9 +315,10 @@ text-decoration: underline #500d0d;
     background-color: #FDD4B6;
 }
 .title-protocol{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Great Vibes', cursive;
     font-weight: 500;
     font-size: 48px;
+    color: #500d0d;
     line-height: 1.25em;
     text-align: center;
     padding-top: 30px;
