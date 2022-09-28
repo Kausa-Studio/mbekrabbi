@@ -129,17 +129,7 @@ font-weight: 600;
 text-decoration: underline #500d0d;
 }
 
-#mp3-mute{
-    background-color: #500d0d;
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    padding: 10px;
-}
+
 
 
 
@@ -511,6 +501,33 @@ text-decoration: underline #500d0d;
     }
     .img-gallery{
         height: 350px;
+        width: 200px;
+        object-fit: cover;
+        
+     }
+}
+@media only screen and (max-height: 650px){
+    .page2l{
+        margin: 0 15px 0 15px ;
+        height:30vh;
+        
+    }
+    .img-gallery{
+        height: 350px;
+        width: 200px;
+        object-fit: cover;
+        
+     }
+}
+@media only screen and (max-width: 385px){
+    .page2l{
+        margin: 0 15px 0 15px ;
+        height:30vh;
+        font-size: 20px;
+        line-height: 27px;
+    }
+    .img-gallery{
+        height: 300px;
         width: 200px;
         object-fit: cover;
         

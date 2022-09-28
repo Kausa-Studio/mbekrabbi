@@ -20,9 +20,6 @@
   <audio id="maliq" loop>
     <source src="src/dia-maliq.mp3" type="audio/ogg" />
   </audio>
-  <div id="mp3-mute">
-    a
-  </div>
 
   <!--Page 1-->
   <div class="container-100">
@@ -408,7 +405,7 @@
       var element = document.querySelector("#box");
       element.scrollIntoView({
         behavior: 'smooth',
-        block: 'end'
+        block: 'start'
       });
     }
   </script>
@@ -445,7 +442,7 @@
     loop:true,
     dots:false,
     autoplay:true,
-    autoplayTimeout:1000,
+    autoplayTimeout:1500,
     autoplayHoverPause:true,
     responsiveClass:true,
     responsive:{
