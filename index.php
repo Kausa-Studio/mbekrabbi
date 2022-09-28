@@ -1,3 +1,12 @@
+  <?php 
+  if(empty($_GET)){
+    
+    $nama = "Kosong";
+  }
+  else{
+    $nama = $_GET['u'];
+    };
+  ?>
 <!doctype html>
 <html lang="en">
 
@@ -31,7 +40,7 @@
           </div>
 
           <div class="text-center">
-            Hello <span class="nama-terundang">Prs Denny</span>
+            Hello <span class="nama-terundang"><?=$nama;?></span>
           </div>
 
           <div class="text-center">
@@ -387,7 +396,7 @@
   <!--Page footer-->
   <div class="container-footer">
     <div class="text-center txt-footer">
-      made with <span> <img width="15" height="15" src="src/akar-icons_heart.png" alt="" class="img-fluid "> </span> kausa-studio
+      made with <span> <img width="15" height="15" src="src/akar-icons_heart.png" alt="" class="img-fluid "> </span> by Kausa Studio
     </div>
   
   </div>
