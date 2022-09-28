@@ -25,6 +25,11 @@ a{
     height: 100%;
     background-color: #500d0d;
 }
+.container-wt {
+    height: auto;
+    background-color: #FDD4B6;
+    padding-bottom: 30px;
+}
 
 .no-gutters {
     margin-right: 0;
@@ -173,6 +178,82 @@ text-decoration: underline #500d0d;
     object-fit: scale-down;
    
 }
+/*Page 2.5*/
+.page25t{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10vh;
+    padding-top:20px ;
+    margin-bottom: 5px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 35px;
+    color: #500d;
+}
+.page25r{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #500d;
+    font-size: 25px;
+    text-align: center;
+}
+.page25l{
+   
+    color: #500d;
+    line-height: 36px;
+    margin: 0px 300px 0 300px;
+    font-size: 24px;
+    text-align: center;
+}
+.foto-nikah{
+    max-height: 300px;
+    text-align: center;
+    margin-top: 20px;
+    border: 3px solid #500d0d;
+    border-radius: 100%;
+}
+.nama-pendek-nikah{
+    margin-top: 20px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.nama-pendek-nikah::after{
+    content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	animation: underline 2s infinite;
+}
+.nama-panjang-nikah{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.dari{
+    font-size: 18px;
+    font-weight: 600;
+   
+}
+.bapak{
+    font-size: 18px;
+    line-height: 18px;
+    margin: 5px 0 5px 0;
+}
+.dan{
+    font-size: 18px;
+    line-height: 18px;
+    margin: 5px 0 5px 0;
+}
+.ibu{
+    font-size: 18px;
+    line-height: 18px;
+    
+}
+
 /*Page 3*/
 .container-venue {
     height: auto;
@@ -435,7 +516,10 @@ text-decoration: underline #500d0d;
     box-shadow: 0 0 0 10px rgba(80, 13, 13, 0.219);
   }
 }
-
+@keyframes underline {
+  0% { width: 0%; background-color: #500d0d;}
+  100% {width: 100%; background-color: transparent;}
+}
 @keyframes openanimationkanan {
     0% {
       transform: translateX(200%);
