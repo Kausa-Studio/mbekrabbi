@@ -427,7 +427,7 @@ text-decoration: underline #500d0d;
 }
 .txt-protokol1{
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.25em;
     text-align: center;
     color: #500D0D;
@@ -447,6 +447,19 @@ text-decoration: underline #500d0d;
     color: #500D0D;
 }
 
+/*Page f0oter*/
+.container-footer{
+    background-color: #500d0d;
+    height: 50px;
+}
+.txt-footer{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25em;
+    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+}
 
 
 /*responsive*/
