@@ -283,27 +283,18 @@
     function triggerlagu() {
       var audio = document.getElementById("maliq");
       audio.play();
-    }
-  </script>
-  <script>
-    const btn = document.getElementById('btn-undangan');
-
-    btn.addEventListener('click', () => {
-
       const box = document.getElementById('box');
       box.style.display = 'block';
-      const box1 = document.getElementById('box1');
-      box1.style.display = 'block';
-      const box2 = document.getElementById('box2');
-      box2.style.display = 'block';
+   
 
       var element = document.querySelector("#box");
       element.scrollIntoView({
         behavior: 'smooth',
         block: 'end'
       });
-    });
+    }
   </script>
+
   <script type="text/javascript">
     function updateTimer() {
         future = Date.parse("oct 8, 2022 09:30:00");
