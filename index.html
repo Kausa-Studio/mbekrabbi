@@ -57,51 +57,65 @@
     </div>
 
   </div>
-
   <!--Page 2-->
   <div id="box" class="container-100cr" style="display: block;">
     <div class="row no-gutters">
       <div class="col-md-12">
         <div class="page2t">
-          Our Love Story
+          <span>Our <span style="text-decoration:line-through ;">Love</span> Struggle story</span>
         </div>
       </div>
       <div class="col-md-12">
         <div class="page2l">
-          <img class="img-gallery" src="src/page2-fotombek.png" title="This image needs to be centered">
+          We try to defeat every fragments of our own misgivings,
+          For some reason that we just not as straight as an arrow,
+          We realized that we're a fraction to complete,
+          Filled each other with our flawed perceiving,
+          And sometimes we cover the gap with our sorrow 
         </div>
       </div>
       <div class="col-md-12">
         <div class="page2r">
-          "We love coffee, we love books, but the most important thing is we love each other :)"
+          
         </div>
       </div>
     </div>
   </div>
   <!--Page 3-->
-  <div id="box1" class="container-100" style="display: block;">
-    <div class="row">
-      <div class="col-md-6">
-
-      </div>
-      <div class="col-md-6">
-
-      </div>
-    </div>
-  </div>
-  <!--Page 4-->
-  <div id="box2" class="container-50" style="display: block;">
+  <div class="container-venue" style="display: block;">
     <div class="row no-gutters">
-      <div class="col-md-6 half-crn" style="border:2px solid saddlebrown">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">   
+        <div class="page3m">
+          <div class="contentvenue">
+            <img class="img-fluid bijibungavenue" src="src/page1-bijibungamatahari.png" title="This image needs to be centered">
+            <div class="judul-venue">Walimatul ‘Ursy</div>
+            <div class="">Sabtu Pahing</div>
+            <div class="menonjol">08 Oktober 2022</div>
+            <div class="">09.30 - 11:30WIB</div>
 
-      </div>
-      <div class="col-md-6 half-cr">
+            <div class="judul-venue">Venue</div>
+            <div class="menonjol">Al-Hakim
+              Convention Hall</div>
+            <div class="">Jl. Tentara Pelajar, Gayamprit, Klaten Selatan, Kab.Klaten</div>
+            
+            <div class="btngmapsctr">  <a target="_blank" href="https://www.google.com/maps/place/7HVV%2BXXC+Al+Hakim+Convention+Hall,+Jl.+Tentara+Pelajar,+Gayamprit,+Klaten+Selatan,+Klaten+Regency,+Central+Java+57423/@-7.7050718,110.5948842,15z/data=!4m5!3m4!1s0x2e7a459a730c62b1:0xde9b00d6fdc68294!8m2!3d-7.7050718!4d110.5948842">
+              <div class="btn-gmaps"> 📍 Lihat lokasi</div>
+            </a></div>
+          
 
+            <div class="judul-venue">Counting</div>
+            <div id="timer"></div>
+          </div>
+        </div>
       </div>
+      <div class="col-md-2"></div>
+
     </div>
   </div>
+
   <!--Page 5-->
-  <div id="box" class="container-ucapan" style="display: block;">
+  <div class="container-ucapan" style="display: block;">
     <div class="container-fluid margin-ucapan">
       <div class="row no-gutters">
         <div class="col-md-2">
@@ -181,7 +195,7 @@
   </div>
 
   <!--Page 6-->
-  <div id="box" class="container-protocol" style="display: block;">
+  <div  class="container-protocol" style="display: block;">
     <div class="col-md-12">
       <div class="title-protocol">
         Protokol Kesehatan
@@ -289,6 +303,31 @@
       });
     });
   </script>
+  <script type="text/javascript">
+    function updateTimer() {
+        future = Date.parse("oct 8, 2022 09:30:00");
+        now = new Date();
+        diff = future - now;
+    
+        days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        hours = Math.floor(diff / (1000 * 60 * 60));
+        mins = Math.floor(diff / (1000 * 60));
+        secs = Math.floor(diff / 1000);
+    
+        d = days;
+        h = hours - days * 24;
+        m = mins - hours * 60;
+        s = secs - mins * 60;
+    
+        document.getElementById("timer")
+            .innerHTML =
+            '<div>' + d + '<span>Hari</span></div>' +
+            '<div>' + h + '<span>Jam</span></div>' +
+            '<div>' + m + '<span>Menit</span></div>' +
+            '<div>' + s + '<span>Detik</span></div>';
+    }
+    setInterval('updateTimer()', 1000);
+    </script>
 </body>
 
 </html>
