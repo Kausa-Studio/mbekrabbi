@@ -22,7 +22,7 @@ a{
     background-color: #500d0d;
 }
 .container-100cr {
-    height: 100%;
+    height: auto;
     background-color: #500d0d;
 }
 .container-wt {
@@ -34,6 +34,8 @@ a{
 .no-gutters {
     margin-right: 0;
     margin-left: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
 .logo-page1r {
@@ -156,16 +158,19 @@ text-decoration: underline #500d0d;
 }
 .page2r{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    height: 10vh;
+    height:70vh;
     color: #fff;
     font-size: 25px;
     text-align: center;
 }
 .page2l{
-   
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     color: #fff;
     line-height: 36px;
     margin: 0px 300px 0 300px;
@@ -173,10 +178,17 @@ text-decoration: underline #500d0d;
     text-align: center;
 }
 .img-gallery{
-    height: 90%;
-    max-width: 100%;
-    object-fit: scale-down;
+   height: 450px;
+   width: 200px;
+   object-fit: cover;
+   border-radius: 20px;
+   border: 3px solid #FDD4B6;
    
+}
+.owl-item {width: 100px; 
+    margin-right: 10px; 
+    
+    
 }
 /*Page 2.5*/
 .page25t{
@@ -188,7 +200,7 @@ text-decoration: underline #500d0d;
     padding-top:20px ;
     margin-bottom: 5px;
     font-family: 'Great Vibes', cursive;
-    font-size: 35px;
+    font-size: 45px;
     color: #500d;
 }
 .page25r{
@@ -212,7 +224,7 @@ text-decoration: underline #500d0d;
     max-height: 300px;
     text-align: center;
     margin-top: 20px;
-    border: 3px solid #500d0d;
+    border: 5px solid #500d0d;
     border-radius: 100%;
 }
 .nama-pendek-nikah{
@@ -456,12 +468,12 @@ text-decoration: underline #500d0d;
         height: 10vh;
     }
     .page2r{
-        height: 10vh;
+        height: 50vh;
 
     }
     .page2l{
         margin: 0 15px 0 15px ;
-        height:35vh;
+        height:30vh;
     }
     .btn-buka-undangan-atas{
         display: none;
@@ -484,6 +496,12 @@ text-decoration: underline #500d0d;
         border-radius: 0px 0px 20px 20px;
      
     }
+    .img-gallery{
+        height: 350px;
+        width: 200px;
+        object-fit: cover;
+        
+     }
 }
 @media only screen and (min-width: 769px) {
     .btn-buka-undangan-bawah{
