@@ -1,7 +1,7 @@
   <?php 
   if(empty($_GET)){
     
-    $nama = "Kosong";
+    $nama = " ";
   }
   else{
     $nama = $_GET['u'];
