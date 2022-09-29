@@ -129,6 +129,11 @@ font-weight: 600;
 text-decoration: underline #500d0d;
 }
 
+.text-danger{
+    font-size: 16px;
+    color: #500d0d;
+}
+
 
 
 

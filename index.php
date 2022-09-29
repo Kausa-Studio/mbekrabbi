@@ -23,6 +23,7 @@
 </script>
  <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js">
    </script>
+   <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
 
 <body>
@@ -237,71 +238,42 @@
         <div class="col-md-2">
 
         </div>
+        
+        
         <div class="col-md-4 bg-ucapan1">
           <div class="title-undangan">
             Form Ucapan dan Doa
           </div>
+          <form method="post" class="form-data" id="form-data"> 
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nama</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nama">
+            <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama" required>
+            <p class="text-danger" id="err_nama"></p>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Ucapan dan Doa</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" name="ucapan" id="ucapan" rows="3" required></textarea>
+            <p class="text-danger" id="err_ucapan"></p>
           </div>
           <div class="mb-3">
             <div class="d-grid gap-2">
-              <button type="submit" class="btn btn-primary btn-send" type="button">Kirim</button>
+              <button type="button" name="kirim" id="kirim" class="btn btn-primary btn-send" type="button">Kirim</button>
             </div>
           </div>
-
+          </form>
         </div>
+        
         <div class="col-md-4 bg-ucapan2">
           <div class="title-undangan text-justify">
             Ucapan dan Doa
           </div>
           <div class="overflow-auto" style="max-height: 260px;">
-            <div class="chat">
-              <span><b> Heri</b>
-                <br>Semoga bahagia selamanya..sampai kakek nenek🤲<br>
-              </span>
-            </div>
-            <div class="chat">
-              <span><b> Heri</b>
-                <br>Semoga bahagia selamanya..sampai kakek nenek🤲<br>
-              </span>
-            </div>
-            <div class="chat">
-              <span><b> Heri</b>
-                <br>Semoga bahagia selamanya..sampai kakek nenek🤲<br>
-              </span>
-            </div>
-            <div class="chat">
-              <span><b> Heri</b>
-                <br>Semoga bahagia selamanya..sampai kakek nenek🤲<br>
-              </span>
-            </div>
-            <div class="chat">
-              <span><b> Heri</b>
-                <br>Semoga bahagia selamanya..sampai kakek nenek🤲<br>
-              </span>
-            </div>
-            <div class="chat">
-              <span><b> Heri</b>
-                <br>Semoga bahagia selamanya..sampai kakek nenek🤲<br>
-              </span>
-            </div>
-            <div class="chat">
-              <span><b> Heri</b>
-                <br>Semoga bahagia selamanya..sampai kakek nenek🤲<br>
-              </span>
-            </div>
-            <div class="chat">
-              <span><b> Heri</b>
-                <br>Semoga bahagia selamanya..sampai kakek nenek🤲<br>
-              </span>
-            </div>
+            <div class="listchat">
+                <!-- isi chat -->
+            </div>           
           </div>
+          
+          
         </div>
         <div class="col-md-2">
 
@@ -403,6 +375,48 @@
 
 
   <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+          
+	    $('.listchat').load("listucapan.php");
+
+      $("#kirim").click(function(){
+        var data = $('.form-data').serialize();
+
+        var nama = document.getElementById("nama").value;
+        var ucapan = document.getElementById("ucapan").value;
+ 
+        if (nama=="") {
+        	document.getElementById("err_nama").innerHTML = "Nama Harus Diisi";
+        } else {
+        	document.getElementById("err_nama").innerHTML = "";
+        }
+        if (ucapan=="") {
+        	document.getElementById("err_ucapan").innerHTML = "Ucapan dan Doa Harus Diisi";
+        } else {
+        	document.getElementById("err_ucapan").innerHTML = "";
+        }
+        
+ 
+        if (nama != "" && ucapan != "") {
+        	$.ajax({
+	            type: 'POST',
+	            url: "form_ucapan.php",
+	            data: data,
+	            success: function() {
+	                $('.listchat').load("listucapan.php");
+	                document.getElementById("id").value = "";
+	                document.getElementById("form-data").reset();
+	            }, error: function(response){
+		        console.log(response.responseText);
+		        }
+	        });
+        }
+        
+    });
+
+	});
+</script>
   <script>
     function triggerlagu() {
       var audio = document.getElementById("maliq");
