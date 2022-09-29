@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2022 at 03:36 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Sep 29, 2022 at 05:31 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `adhazaim`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ucapan`
+--
+
+CREATE TABLE `ucapan` (
+  `UCAPAN_ID` int(11) NOT NULL,
+  `NAMA` varchar(100) NOT NULL,
+  `UCAPAN` varchar(1000) NOT NULL,
+  `CREATED_DATE` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ucapan`
+--
+
+INSERT INTO `ucapan` (`UCAPAN_ID`, `NAMA`, `UCAPAN`, `CREATED_DATE`) VALUES
+(1, 'heri', 'selamat ya ', '2022-09-29'),
+(2, 'adha', 'selamat kelon ', '2022-09-29'),
+(3, 'Mulia ', 'TEST', '2022-09-29'),
+(6, 'pepi', 'selamat ya mbek', '2022-09-29');
 
 -- --------------------------------------------------------
 
@@ -620,6 +643,26 @@ INSERT INTO `undangan` (`Nama`) VALUES
 ('LEVIAN LINTANG PAMENANG'),
 ('DENNY PRASTIYO'),
 ('YUDO BUDI ');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `ucapan`
+--
+ALTER TABLE `ucapan`
+  ADD PRIMARY KEY (`UCAPAN_ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `ucapan`
+--
+ALTER TABLE `ucapan`
+  MODIFY `UCAPAN_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
